@@ -1,6 +1,11 @@
 new Test().add([
         testUID
-    ]).run();
+    ]).run().worker(function(err, test) {
+        if (!err && typeof UID_ !== "undefined") {
+            UID = UID_;
+            new Test(test).run().worker();
+        }
+    });
 
 function testUID(next) {
 
