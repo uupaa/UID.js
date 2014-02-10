@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.uid.js",
-  "version":        "0.8.2",
+  "version":        "0.8.3",
   "description":    "Create Unique ID.",
   "url":            "https://github.com/uupaa/UID.js",
   "keywords":       ["UID", "unique", "ID", "util", "uupaa"],
@@ -15,7 +15,6 @@
   "dependencies": {
   },
   "devDependencies": {
-    "uupaa.mappedarray.js": "",
     "uupaa.help.js":    "",
     "uupaa.test.js":    "",
     "uupaa.task.js":    "",
