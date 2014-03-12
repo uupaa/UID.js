@@ -1,11 +1,11 @@
 new Test().add([
         testUID
     ]).run().worker(function(err, test) {
-        if (!err) {
-            var undo = Test.swap(UID, UID_);
+        if (!err && typeof UID_ !== "undefined") {
+            var name = Test.swap(UID, UID_);
 
             new Test(test).run(function(err, test) {
-                undo = Test.undo(undo);
+                Test.undo(name);
             });
         }
     });

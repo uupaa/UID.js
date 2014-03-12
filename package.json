@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.uid.js",
-  "version":        "0.8.3",
+  "version":        "0.8.4",
   "description":    "Create Unique ID.",
   "url":            "https://github.com/uupaa/UID.js",
   "keywords":       ["UID", "unique", "ID", "util", "uupaa"],
@@ -9,12 +9,22 @@
     "url":          "https://github.com/uupaa/UID.js.git"
   },
   "scripts": {
-    "start":        "node node_modules/uupaa.minify.js --keep --output ./lib/UID.min.js ./lib/UID.js",
-    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html"
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build ./lib/UID.js",
+    "build":        "node node_modules/uupaa.minify.js --keep --option 'formatting pretty_print' --output ./lib/UID.min.js ./lib/UID.js",
+    "build-release":"node node_modules/uupaa.minify.js --module all --output ./lib/UID.min.js",
+    "test":         "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js; open test/index.html",
+    "lint":         "plato --title UID.js --jshint .jshintrc -d lint/plato lib/UID.js; open lint/plato/index.html"
+  },
+  "build": {
+    "all": { "lib/UID.js": "" },
+    "node": { },
+    "worker": { },
+    "browser": { }
   },
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.valid.js":    "",
     "uupaa.help.js":    "",
     "uupaa.test.js":    "",
     "uupaa.task.js":    "",
