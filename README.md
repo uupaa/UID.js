@@ -1,7 +1,7 @@
 UID.js
 =========
 
-Create Unique ID.
+Unique ID.
 
 # Document
 

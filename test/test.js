@@ -1,11 +1,15 @@
 new Test().add([
         testUID
-    ]).run().worker(function(err, test) {
-        if (!err && typeof UID_ !== "undefined") {
-            var name = Test.swap(UID, UID_);
+    ]).run(function(err, test) {
+        if (1) {
+            err || test.worker(function(err, test) {
+                if (!err && typeof UID_ !== "undefined") {
+                    var name = Test.swap(UID, UID_);
 
-            new Test(test).run(function(err, test) {
-                Test.undo(name);
+                    new Test(test).run(function(err, test) {
+                        Test.undo(name);
+                    });
+                }
             });
         }
     });
