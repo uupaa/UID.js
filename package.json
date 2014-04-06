@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.uid.js",
-  "version":        "0.8.5",
+  "version":        "0.8.6",
   "description":    "Unique ID.",
   "url":            "https://github.com/uupaa/UID.js",
-  "keywords":       ["UID", "unique", "ID", "util", "uupaa"],
+  "keywords":       ["UID", "unique", "ID", "util", "uupaa", "WebModule"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/UID.js.git"
@@ -18,11 +18,12 @@
   },
   "x-build": {
     "inputs":       ["lib/UID.js"],
-    "output":       "lib/UID.min.js"
+    "output":       "release/UID.min.js"
   },
   "dependencies": {
   },
   "devDependencies": {
+    "uupaa.console.js": "",
     "uupaa.valid.js":   "",
     "uupaa.help.js":    "",
     "uupaa.task.js":    "",

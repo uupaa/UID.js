@@ -5,7 +5,12 @@ Unique ID.
 
 # Document
 
-https://github.com/uupaa/UID.js/wiki/UID
+- https://github.com/uupaa/UID.js/wiki/UID
+
+and
+
+- https://github.com/uupaa/WebModule and [slide](http://uupaa.github.io/Slide/slide/WebModule/index.html)
+- https://github.com/uupaa/Help.js and [slide](http://uupaa.github.io/Slide/slide/Help.js/index.html)
 
 # How to use
 
