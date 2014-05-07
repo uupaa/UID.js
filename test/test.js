@@ -1,18 +1,19 @@
-new Test().add([
-        testUID
-    ]).run(function(err, test) {
-        if (1) {
-            err || test.worker(function(err, test) {
-                if (!err && typeof UID_ !== "undefined") {
-                    var name = Test.swap(UID, UID_);
+var ModuleTestUID = (function(global) {
 
-                    new Test(test).run(function(err, test) {
-                        Test.undo(name);
-                    });
-                }
-            });
-        }
-    });
+var _inNode    = "process"        in global;
+var _inWorker  = "WorkerLocation" in global;
+var _inBrowser = "document"       in global;
+
+return new Test("UID", {
+        disable:    false,
+        browser:    true,
+        worker:     true,
+        node:       true,
+        button:     true,
+        both:       true,
+    }).add([
+        testUID
+    ]).run().clone();
 
 function testUID(next) {
 
@@ -27,11 +28,11 @@ function testUID(next) {
     if (uid1 + 1 === uid2 &&
         uid3 + 1 === uid4 &&
         uid5 + 1 === uid6) {
-        console.log("testUID ok");
         next && next.pass();
     } else {
-        console.log("testUID ng");
         next && next.miss();
     }
 }
+
+})((this || 0).self || global);
 
