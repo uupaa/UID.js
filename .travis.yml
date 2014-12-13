@@ -5,7 +5,7 @@ before_script:
     - "pwd"
     - "npm install"
     - "npm install uupaa.closurecompiler.js"
-    - "node node_modules/uupaa.closurecompiler.js --output ./release/UID.min.js --source lib/Minify.js
+    - "node node_modules/uupaa.closurecompiler.js --output ./release/UID.min.js --source lib/Minify.js"
 script:
     - "npm run node"
 
