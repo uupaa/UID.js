@@ -2,12 +2,10 @@ language: node_js
 node_js:
     - "0.10"
 before_script:
-    - "cd ../"
-    - "git clone https://github.com/uupaa/WebModule.git"
-    - "cd -"
+    - "pwd"
     - "npm install"
-    - "npm install uupaa.compile.js"
-    - "npm run minify"
+    - "npm install uupaa.closurecompiler.js"
+    - "node node_modules/uupaa.closurecompiler.js --output ./release/UID.min.js --source lib/Minify.js
 script:
     - "npm run node"
 
